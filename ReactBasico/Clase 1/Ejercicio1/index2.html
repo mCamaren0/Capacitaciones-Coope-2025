@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <script type="module">
+        // Función autoejecutable asíncrona para obtener y mostrar los datos
+        (async function fetchData() {
+            try {
+                const res = await fetch("http://localhost:3000/groups");
+                const data = await res.json();
+                const groups = Object.entries(data);
+
+                // Crear un componente que renderiza los grupos y equipos
+                const element = React.createElement('div', null,
+                    groups.map(([groupName, teams]) =>
+                        React.createElement('div', { key: groupName },
+                            React.createElement('h5', null, groupName),
+                            React.createElement('ul', null,
+                                Object.entries(teams).map(([teamName, country]) =>
+                                    React.createElement('li', { key: teamName }, country)
+                                )
+                            )
+                        )
+                    )
+                );
+
+                const root = ReactDOM.createRoot(document.querySelector('#resultado'));
+                root.render(element);
+
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        })();
+    </script>
+
+    <div id="resultado"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        //import products, {pi} from './products.js';
+        //Se puede importar todo el archivo o solo una parte, solo hay un export por defecto, el resto va entre corchetes
+        import products, {pi} from './products.js';
+        console.log(products.length);
+        const p1 = products[0];
+
+        console.log(p1.productName);
+
+        const nombre = p1.productName;
+        console.log(nombre);
+
+        //Destructuración opcion mas usada
+        let  {productName, unitPrice} = p1;
+        console.log(productName, unitPrice);
+
+        //Destructuración opcion menos usada
+        let  {productName:pName, unitPrice:pPrice} = p1;
+        console.log(pName, pPrice);
+
+        //Template literals (string interoolation)
+        const pString = `${pName} vale ${pPrice}`;
+        console.log(pString);
+
+        let [x, y] = [1, 2];
+        console.log(x, y);
+
+        //Rest / spread / resto
+        let [a, b, ...c] = products;
+        console.log(c.length);
+        console.log(a, b, c);
+        console.log(c);
+        console.log(...c);
+
+        //ciclo for of
+        // ciclo for tradicional por cada uno de los elementos de la colección
+        for (const product of products) {
+            console.log(product.productName);
+        };
+
+
+        products.forEach(function (p) {
+            console.log(p.productName);
+        });
+        console.clear();
+
+        //Arrow functions
+        products.forEach(p => console.log(p.productName));
+
+        console.clear();
+        //dom api
+        // este es el mas comun
+        const ul = document.getElementById('productsList');
+        // este es el menos comun
+        //const ul = document.querySelector('#productsList');
+        if (ul) {
+            products.forEach(p => {
+                const li = document.createElement('li');
+                li.textContent = p.productName;
+                ul.appendChild(li);
+            });
+        };
+
+        console.clear();
+        //promesas api
+        const promesa = await fetch('https://api.github.com/users/alejandrorodarte');
+        const data = await promesa.json();
+
+    </script>
+
+    <ul id="productsList">
+
+    </ul>
+
+    <!-- esto sirve tambien
+    <script type="module" src="products.js">
+        //import products from '/products.js';
+    </script>
+    -->
+</body>
+</html>

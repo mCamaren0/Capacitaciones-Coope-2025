@@ -1,0 +1,53 @@
+<!-- 
+Tomando el ejercicio 3 con los dos gatos
+Cree un constructor para esos objetos, de manera que no se repita codigo
+E instancie los dos gatos con ese constructor 
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    function createCat(pName, pBreed, pColor){
+      const cat = {};
+
+        cat.name  = pName,
+        cat.breed = pBreed,
+        cat.color = pColor,
+        cat.greeting = function() {
+          console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+        };
+      
+      return cat;
+    }
+
+    const cat = createCat('Gato', 'Angora', 'Alazan');
+    const cat2 = createCat('Africato', 'Africano', 'Capiroto');
+
+    cat.greeting();
+    cat2.greeting();
+  </script>
+
+</html>

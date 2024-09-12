@@ -1,0 +1,7 @@
+form > input.is-invalid {
+  border-color: red;
+}
+
+form > input.is-valid {
+    border-color: greenyellow;
+  }

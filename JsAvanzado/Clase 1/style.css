@@ -1,0 +1,28 @@
+.container {
+    height: 75vh;
+    overflow-y: hidden;
+}
+
+#imgList {
+    overflow-y: scroll;
+}
+
+#imgList ul {
+    list-style-type: none;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#imgList ul li {
+    margin: 10px;
+}
+
+#imgList ul li img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}

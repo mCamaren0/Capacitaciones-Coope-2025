@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            function es_par(numero) {
+                return numero % 2 === 0;
+            }
+
+            function es_primo(numero) {
+                if (numero <= 1) 
+                    return false;
+                    if (numero === 2) 
+                        return true; 
+
+                    for (let i = 2; i <= Math.sqrt(numero); i++) {
+                        if (numero % i === 0)
+                        return false;
+                    }
+                    return true; 
+            }
+
+            function invertir(numero) {
+                return parseInt(numero.toString().split('').reverse().join(''), 10);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="numero_par" placeholder="Escribe algo aquí">
+        <button class="boton_par" onclick="es_par(document.getElementById('numero_par').value)">Tu numero es par?</button>
+        <button class="boton_primo" onclick="es_primo(document.getElementById('numero_par').value)">Tu numero es primo?</button>
+        <button class="boton_invertir" onclick="invertir(document.getElementById('numero_par').value)">Tu numero invertido es:</button>
+    </body>
+</html>

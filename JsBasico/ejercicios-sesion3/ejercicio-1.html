@@ -1,0 +1,63 @@
+<!-- 
+ Crear una variable llamada catName que obtenga el dato del nombre del gato
+ Modifique la propiedad del color del gato
+ Crear otra variable que guarde el color del gato
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const cat = {
+      name : 'Bertie',
+      breed : 'Cymric',
+      color : 'white',
+      greeting: function() {
+        console.log('Meow!');
+      }
+    }
+
+    // Su codigo va aqui
+    let catName = cat["name"];
+    cat["color"] = 'red';
+    let catColor = cat["color"];
+
+
+    // No cambie esto
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+
+    para1.textContent = `The cat's name is ${ catName }.`;
+    para2.textContent = `The cat's color is ${ catColor }.`;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>

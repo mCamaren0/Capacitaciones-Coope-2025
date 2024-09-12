@@ -1,0 +1,54 @@
+<!-- 
+Modifique el método greeting para que sea un saludo "Hola, soy {nombre gato} y soy un { raza }" 
+Cree un segundo objeto cat2 con los mismos atributos pero diferentes valores
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const cat = {
+      name : 'Bertie',
+      breed : 'Cymric',
+      color : 'white',
+      greeting: function() {
+        console.log(`Hola, soy ${this.name} y soy un ${this.breed}!`);
+      }
+    }
+
+    const cat2 = {
+      name : 'Katty',
+      breed : 'Angora',
+      color : 'white',
+      greeting: function() {
+        console.log(`Hola, soy ${this.name} y soy un ${this.breed}!`);
+      }
+    }
+
+    cat.greeting();
+    cat2.greeting();
+  </script>
+
+</html>

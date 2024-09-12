@@ -1,0 +1,68 @@
+<!-- 
+ Cree un objeto band que contenga la informacion de una banda de musica
+ Que lleve las siguientes propiedades
+
+ name: String con el nombre de la banda.
+ nationality: string con el nombre del pais.
+ genre: Genero musical de la banda.
+ members: Numero de miembros en la banda.
+ formed: cuando se creó la banda.
+ stillActive: Si la banda todavia existe o no.
+ albums: cantidad de albumes que tiene la banda:
+
+
+ Una vez creado el objeto, genere un string de información de la banda
+ que use los atributos del objeto creado
+ 
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Object basics: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    let bandInfo;
+
+    // Add your code here
+    const banda = {
+        name: 'CANDANGA',
+        nationality: 'CRC',
+        genre: 'CUMBIA',
+        members: 10,
+        formed: 2024,
+        stillActive: 'SI',
+        albums: 'ROLÓN'
+    }
+    bandInfo = `Banda: ${banda["name"]}, Nacionalidad: ${banda["nationality"]}, Genero: ${banda["genre"]}, Miembros: ${banda["members"]}, Año de formacion: ${banda["formed"]}, Aún existe: ${banda["stillActive"]},  Album: ${banda["albums"]}`;
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+</script>
+
+</html>

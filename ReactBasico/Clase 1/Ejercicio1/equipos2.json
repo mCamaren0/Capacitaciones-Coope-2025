@@ -1,0 +1,52 @@
+{
+    "groups": {
+        "Group A": {
+            "equipo1": "Qatar",
+            "equipo2": "Ecuador",
+            "equipo3": "Senegal",
+            "equipo4": "Netherlands"
+        },
+        "Group B": {
+            "equipo1": "England",
+            "equipo2": "IR Iran",
+            "equipo3": "USA",
+            "equipo4": "Wales"
+        },
+        "Group C": {
+            "equipo1": "Argentina",
+            "equipo2": "Saudi Arabia",
+            "equipo3": "Mexico",
+            "equipo4": "Poland"
+        },
+        "Group D": {
+            "equipo1": "France",
+            "equipo2": "Australia",
+            "equipo3": "Denmark",
+            "equipo4": "Tunisia"
+        },
+        "Group E": {
+            "equipo1": "Spain",
+            "equipo2": "Costa Rica",
+            "equipo3": "Germany",
+            "equipo4": "Japan"
+        },
+        "Group F": {
+            "equipo1": "Belgium",
+            "equipo2": "Canada",
+            "equipo3": "Morocco",
+            "equipo4": "Croatia"
+        },
+        "Group G": {
+            "equipo1": "Brazil",
+            "equipo2": "Serbia",
+            "equipo3": "Switzerland",
+            "equipo4": "Cameroon"
+        },
+        "Group H": {
+            "equipo1": "Portugal",
+            "equipo2": "Ghana",
+            "equipo3": "Uruguay",
+            "equipo4": "Korea Republic"
+        }
+    }
+}

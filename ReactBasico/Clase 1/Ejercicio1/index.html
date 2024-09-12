@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <script type="module">
+        const res = await fetch("http://localhost:3000/groups");
+        const data = await res.json();
+
+        const groups = Object.entries(data);
+        console.log(groups);
+
+        const element = React.createElement('div', null,
+            groups.map(([groupName, teams]) => React.createElement('div', { key: groupName },
+                React.createElement('h5', null, groupName),
+                React.createElement('ul', null,
+                    teams.map((team, index) => React.createElement('li', { key: index }, team))
+                )
+            ))
+        );
+
+        const root = ReactDOM.createRoot(document.querySelector('#resultado'));
+        root.render(element);
+    </script>
+
+    <div id="resultado"></div>
+</body>
+</html>
